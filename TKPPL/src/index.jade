@@ -33,10 +33,10 @@ html
         #containerTypingGame(style='visibility : hidden;')
           p#countdownTyping
           .kiri
-            textarea#soalTyping(rows='16', cols='40')
+            textarea#soalTyping(rows='16', cols='37')
               | /* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }
           .kanan
-            textarea#hasilTyping(rows='16', cols='40')
+            textarea#hasilTyping(rows='16', cols='37')
           p#typingScore
           p#gameOverTyping
     script(type='text/javascript', src='build/build.js')
