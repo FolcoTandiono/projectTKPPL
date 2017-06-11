@@ -6,9 +6,10 @@ html
     title Game sederhana
     link(rel='stylesheet', type='text/css', href='build/build.css')
     script(type='text/javascript').
-      var totalScore = 0;
+      var totalScore = 0; var banyak = 3;
     script(type='text/javascript', src='build/flappyBox.js')
     script(type='text/javascript', src='build/typingGame.js')
+    script(type='text/javascript', src='build/luckyGame.js')
   body
     article
       section
@@ -39,4 +40,21 @@ html
             textarea#hasilTyping(rows='16', cols='37')
           p#typingScore
           p#gameOverTyping
+      section#lucky
+        h2 Game pengubah nasib
+        h3.hilang Peraturan
+        p.peraturanLuckyGame 1. Pemain akan mengundi 2 nilai yang akan ditambahkan ke score
+        p.peraturanLuckyGame 2. Pemain akan diberikan 3 kali undian saat game dimulai
+        p.peraturanLuckyGame
+          | 3. Pemain yang mendapatkan 1 undian jika terdapat 2 nilai yang sama ketika mengundi
+        p.peraturanLuckyGame 4. Masing - masing nilai akan dikali 20 sebelum ditambah (biar banyak)
+        button#startLuckyGame(onclick='startLuckyGame()') Start Game
+        #containerLuckyGame(style='display: none;')
+          #luckyKiri 0
+          #luckyKanan 0
+          button#undi(onclick='startUndi()') Blow me
+          #move
+        p#gameOverLucky
+        p#luckyScore
+        p#totalScore
     script(type='text/javascript', src='build/build.js')
