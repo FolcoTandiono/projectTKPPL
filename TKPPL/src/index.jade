@@ -3,95 +3,27 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title Competitive Programming
+    title Game sederhana
     link(rel='stylesheet', type='text/css', href='build/build.css')
+    script(type='text/javascript').
+      var totalScore = 0;
+    script(type='text/javascript', src='build/flappyBox.js')
   body
     article
       section
-        h2 Competitive Programming
-      section
-        h2 Suasana Competitive Programming
-        img(src='/images/CompetitiveProgramming.jpg')
-      section
-        h2 Apa itu Competitive Programming?
-        h3
-          | Competitive Programming adalah sebuah mind sport, dimana setiap kontestan diberikan sejumlah permasalahan dan dituntut untuk menyelesaikannya secepat mungkin
-      section
-        h2 Bagaimana cara memenangkan Competitive Programming?
-      section
-        h3 Tips pertama
-        h2 Fast typing !!!
-      section
-        h3
-          | Setiap kontestan harus terbiasa dengan posisi karakter yang sering digunakan dalam mengetikkan kode pemrograman seperti karakter (, ), {, }, [, ],
-      section
-        h3 Tips kedua
-        h2 Mengidentifikasi jenis permasalahan dengan cepat
-      section
-        h2 Kategori soal yang keluar dalam kontes pemrograman
-        h3 1. Ad hoc
-        p
-          | Sebuah metode dimana pengetahuan tentang teknik tertentu atau algoritma tertentu tidak diperlukan dalam menyelesaikan permasalahan ini. Ad hoc biasanya soal termudah dalam competitive programming.
-      section
-        h3 2. Complete Search
-        p
-          | Sebuah metode yang digunakan untuk mencari solusi dalam seluruh ruang pencarian yang ada
-      section
-        h3 3. Divide and Conquer
-        p
-          | Sebuah metode yang digunakan untuk mencari solusi dengan cara membagi sebuah masalah menjadi sub - sub masalah dengan menyelesaikan masing - masing subproblem tersebut
-      section
-        h3 4. Greedy
-        p
-          | Sebuah metode yang dimana di setiap state mengambil solusi paling optimal dengan harapan mendapatkan solusi akhir yang paling optimal
-      section
-        h3 5. Dynamic Programming
-        p
-          | Sebuah metode yang sama dengan divide and conquer, tetapi setiap state dihitung satu kali saja, dan hasilnya disimpan di dalam koleksi berupa list atau array. Teknik dynamic programming merupakan teknik pemrograman yang paling menantang.
-      section
-        h3 6. Graph
-        img(src='/images/graph.jpg')
-      section
-        h3 7. Matematika
-        img(src='/images/mathematic.jpg')
-      section
-        h3 8. String Processing
-        img(src='/images/stringProcessing.jpg')
-      section
-        h3 9. Geometri
-        img(src='/images/geometri.jpg')
-      section
-        h2 Analisa Algoritma yang digunakan
-          div
+        h2 Game sederhana
+      section#flappy
+        h3 Flappy Box
+        button.startGame(onclick='startFlappyBoxGame()') Start Game
+        div(style='text-align:center;width:480px;')
+          p.countdown
+          button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;') UP
           br
-          img(src='/images/Algorithm.jpg')
-      section
-          img(src='/images/GoodAlgorithm.jpg')
           br
-          blackquote
-            | Dalam kontes pemrograman, tidak semua algoritma bisa digunakan untuk menyelesaikan Permasalahan. Permasalahan bisa menghasilkan Verdict Accepted, karena setiap algoritma ada yg cepat dan ada yg lambat dalam pengeksekusian waktu.
-      sectiom
-        h2 Menguasai Bahasa Pemrograman
-        div
+          button.buttonMoveFlappyBox(onmousedown='moveleft()', onmouseup='clearmove()', ontouchstart='moveleft()', style='visibility: hidden;') LEFT
+          button.buttonMoveFlappyBox(onmousedown='moveright()', onmouseup='clearmove()', ontouchstart='moveright()', style='visibility: hidden;') RIGHT
           br
-          img(src='/images/Bahasa.jpg')
-      section
-        h2 Bahasa Kontes Programming
-        div
-        br
-        table
-          tr
-            td
-              img(src='/images/C.jpg')
-            td
-              img(src='/images/Cplus.jpg')
-            td  
-              img(src='/images/Java.jpg')
-            td
-          tr
-        br
-        blockquote
-          |Bahasa Pemrograman C, C++ dan Java adalah bahasa yang sering digunakan di kontes programming. Masing-masing bahasa memiliki kelebihan dan kelemahan.
-          
-
-    script(src='build/build.js')
+          br
+          button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;') DOWN
+          p.gameOver
+    script(type='text/javascript', src='build/build.js')
