@@ -8,15 +8,16 @@ html
     script(type='text/javascript').
       var totalScore = 0;
     script(type='text/javascript', src='build/flappyBox.js')
+    script(type='text/javascript', src='build/typingGame.js')
   body
     article
       section
         h2 Game sederhana
       section#flappy
         h3 Flappy Box
-        button.startGame(onclick='startFlappyBoxGame()') Start Game
+        button#startFlappyBoxGame(onclick='startFlappyBoxGame()') Start Game
         div(style='text-align:center;width:480px;')
-          p.countdown
+          p#countdownFlappyBox
           button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;') UP
           br
           br
@@ -25,5 +26,17 @@ html
           br
           br
           button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;') DOWN
-          p.gameOver
+          p#gameOverFlappyBox
+      section#typing
+        h3 Typing game
+        button#startTypingGame(onclick='startTypingGame()') Start Game
+        #containerTypingGame(style='visibility : hidden;')
+          p#countdownTyping
+          .kiri
+            textarea#soalTyping(rows='16', cols='40')
+              | /* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }
+          .kanan
+            textarea#hasilTyping(rows='16', cols='40')
+          p#typingScore
+          p#gameOverTyping
     script(type='text/javascript', src='build/build.js')
