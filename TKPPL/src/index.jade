@@ -6,7 +6,7 @@ html
     title Game sederhana
     link(rel='stylesheet', type='text/css', href='build/build.css')
     script(type='text/javascript').
-      var totalScore = 0; var banyak = 3;
+      var totalScore = 0; var banyak = 5; var mulai = 0;
     script(type='text/javascript', src='build/flappyBox.js')
     script(type='text/javascript', src='build/typingGame.js')
     script(type='text/javascript', src='build/luckyGame.js')
@@ -32,14 +32,15 @@ html
         h3 Typing game
         button#startTypingGame(onclick='startTypingGame()') Start Game
         #containerTypingGame(style='visibility : hidden;')
-          p#countdownTyping
           .kiri
+            p#countdownTyping
             textarea#soalTyping(rows='16', cols='37')
               | /* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }
+            p#gameOverTyping
           .kanan
-            textarea#hasilTyping(rows='16', cols='37')
-          p#typingScore
-          p#gameOverTyping
+            p#typingInput
+            textarea#hasilTyping(rows='16', cols='37', onpaste='return false')
+            p#typingScore
       section#lucky
         h2 Game pengubah nasib
         h3.hilang Peraturan
@@ -57,6 +58,4 @@ html
         p#gameOverLucky
         p#luckyScore
         p#totalScore
-      section
-        h1 I am fredick
     script(type='text/javascript', src='build/build.js')
