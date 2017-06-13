@@ -7,9 +7,6 @@ html
     link(rel='stylesheet', type='text/css', href='build/build.css')
     script(type='text/javascript').
       var totalScore = 0; var banyak = 5; var mulai = 0;
-    script(type='text/javascript', src='build/flappyBox.js')
-    script(type='text/javascript', src='build/typingGame.js')
-    script(type='text/javascript', src='build/luckyGame.js')
   body
     article
       section
@@ -41,11 +38,23 @@ html
             p#typingInput
             textarea#hasilTyping(rows='16', cols='37', onpaste='return false')
             p#typingScore
+      section#guess
+        h3 Fast Guess
+        button#startFastGuessGame(onclick='startFastGuessGame()') Start Game
+        h2#soalFastGuess
+        #containerFastGuess(style='display:none;')
+          button.fastGuessButton(onclick='check(0)') A
+          button.fastGuessButton(onclick='check(1)') B
+          button.fastGuessButton(onclick='check(2)') C
+          button.fastGuessButton(onclick='check(3)') D
+          h3#soalCount
+        h3#countFastGuess
+        h3#scoreFastGuess
       section#lucky
-        h2 Game pengubah nasib
+        h2 Lucky game
         h3.hilang Peraturan
         p.peraturanLuckyGame 1. Pemain akan mengundi 2 nilai yang akan ditambahkan ke score
-        p.peraturanLuckyGame 2. Pemain akan diberikan 3 kali undian saat game dimulai
+        p.peraturanLuckyGame 2. Pemain akan diberikan 5 kali undian saat game dimulai
         p.peraturanLuckyGame
           | 3. Pemain yang mendapatkan 1 undian jika terdapat 2 nilai yang sama ketika mengundi
         p.peraturanLuckyGame 4. Masing - masing nilai akan dikali 20 sebelum ditambah (biar banyak)
@@ -59,3 +68,7 @@ html
         p#luckyScore
         p#totalScore
     script(type='text/javascript', src='build/build.js')
+    script(type='text/javascript', src='build/flappyBox.js')
+    script(type='text/javascript', src='build/typingGame.js')
+    script(type='text/javascript', src='build/luckyGame.js')
+    script(type='text/javascript', src='build/fastGuessGame.js')
