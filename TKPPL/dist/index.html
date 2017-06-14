@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Game sederhana</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+    <script type="text/javascript">var totalScore = 0; var banyak = 5; var mulai = 0;</script>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2>Game sederhana</h2>
+      </section>
+      <section id="flappy">
+        <h3>Flappy Box</h3>
+        <button id="startFlappyBoxGame" onclick="startFlappyBoxGame()">Start Game</button>
+        <div style="text-align:center;width:480px;">
+          <p id="countdownFlappyBox"></p>
+          <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()" style="visibility: hidden;" class="buttonMoveFlappyBox">UP</button><br><br>
+          <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()" style="visibility: hidden;" class="buttonMoveFlappyBox">LEFT</button>
+          <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()" style="visibility: hidden;" class="buttonMoveFlappyBox">RIGHT</button><br><br>
+          <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()" style="visibility: hidden;" class="buttonMoveFlappyBox">DOWN</button>
+          <p id="gameOverFlappyBox"></p>
+        </div>
+      </section>
+      <section id="hand">
+      	<h3>Fast hand</h3>
+      	<div id="fastHandRule">
+	      	<h3>Rule</h3>
+	      	<h3>Click the box</h3>
+      	</div>
+      	<button id="startFastHandGame" onclick="startFastHandGame()">Start Game</button>
+      </section>
+      <section id="typing">
+        <h3>Typing game</h3>
+        <button id="startTypingGame" onclick="startTypingGame()">Start Game</button>
+        <div id="containerTypingGame" style="visibility : hidden;">
+          <div class="kiri">
+          	<p id="countdownTyping"></p>
+            <textarea id="soalTyping" rows="16" cols="37">/* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }</textarea>
+            <p id="gameOverTyping"></p>
+          </div>
+          <div class="kanan">
+          	<p id="typingInput"></p>
+            <textarea id="hasilTyping" rows="16" cols="37" onPaste="return false"></textarea>
+            <p id="typingScore"></p>
+          </div>
+        </div>
+      </section>
+      <section id="guess">
+      	<h3>Fast Guess</h3>
+      	<button id="startFastGuessGame" onclick="startFastGuessGame()">Start Game</button>
+      	<h2 id="soalFastGuess"></h2>
+      	<div id="containerFastGuess" style="display:none;">
+      		<button class="fastGuessButton" onclick="check(0)">A</button>
+      		<button class="fastGuessButton" onclick="check(1)">B</button>
+      		<button class="fastGuessButton" onclick="check(2)">C</button>
+      		<button class="fastGuessButton" onclick="check(3)">D</button>
+      		<h3 id="soalCount"></h3>
+      	</div>
+      	<h3 id="countFastGuess"></h3>
+      	<h3 id="scoreFastGuess"></h3>
+      </section>
+      <section id="lucky">
+        <h2>Lucky game</h2>
+        <h3 class="hilang">Peraturan</h3>
+        <p class="peraturanLuckyGame">1. Pemain akan mengundi 2 nilai yang akan ditambahkan ke score</p>
+        <p class="peraturanLuckyGame">2. Pemain akan diberikan 5 kali undian saat game dimulai</p>
+        <p class="peraturanLuckyGame">3. Pemain yang mendapatkan 1 undian jika terdapat 2 nilai yang sama ketika mengundi</p>
+        <p class="peraturanLuckyGame">4. Masing - masing nilai akan dikali 20 sebelum ditambah (biar banyak)</p>
+        <button id="startLuckyGame" onclick="startLuckyGame()">Start Game</button>
+        <div id="containerLuckyGame" style="display: none;">
+          <div id="luckyKiri">0</div>
+          <div id="luckyKanan">0</div>
+          <button id="undi" onclick="startUndi()">Blow me</button>
+          <div id="move"></div>
+        </div>
+        <p id="gameOverLucky"></p>
+        <p id="luckyScore"></p>
+        <p id="totalScore"></p>
+      </section>
+    </article>
+    <script type="text/javascript" src="build/build.js"></script>
+    <script type="text/javascript" src="build/flappyBox.js"></script>
+    <script type="text/javascript" src="build/typingGame.js"></script>
+    <script type="text/javascript" src="build/luckyGame.js"></script>
+    <script type="text/javascript" src="build/fastGuessGame.js"></script>
+  </body>
+</html>
