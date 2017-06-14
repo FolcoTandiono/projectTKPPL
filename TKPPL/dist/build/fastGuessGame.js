@@ -1,4 +1,4 @@
-var distance = 60;
+var distance = 120;
 var distanceSoal = 3;
 var score = 0;
 var count;
@@ -112,6 +112,7 @@ function check(i) {
 }
 
 function startFastGuessGame() {
+	distance = 60;
 	document.getElementById("startFastGuessGame").style.display = "none";
 	document.getElementById("containerFastGuess").style.display = "inline";
 

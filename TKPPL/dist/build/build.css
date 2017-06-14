@@ -93,10 +93,6 @@ pre[class*="language-"] {
 .token.bold {
   font-weight: bold;
 }
-canvas {
-    border:1px solid black;
-    background-color: white;
-}
 img {
   width: 80%;
 }
@@ -135,14 +131,17 @@ img {
 .peraturanLuckyGame {
   font-size: 12px;
 }
-#typingInput, #countdownTyping, #gameOverTyping, #typingScore {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	display: inline;
+#typingInput,
+#countdownTyping,
+#gameOverTyping,
+#typingScore {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: inline;
 }
 #typingInput {
-	background-color: #00ff00;
+  background-color: #0f0;
 }
 .fastGuessButton {
   font-size: 30px;
@@ -155,4 +154,8 @@ img {
   margin: 0;
   padding: 0;
   padding-top: 10px;
+}
+canvas {
+  border: 1px solid #000;
+  background-color: #fff;
 }

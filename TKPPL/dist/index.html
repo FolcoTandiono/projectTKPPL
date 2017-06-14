@@ -24,43 +24,35 @@
           <p id="gameOverFlappyBox"></p>
         </div>
       </section>
-      <section id="hand">
-      	<h3>Fast hand</h3>
-      	<div id="fastHandRule">
-	      	<h3>Rule</h3>
-	      	<h3>Click the box</h3>
-      	</div>
-      	<button id="startFastHandGame" onclick="startFastHandGame()">Start Game</button>
-      </section>
       <section id="typing">
         <h3>Typing game</h3>
         <button id="startTypingGame" onclick="startTypingGame()">Start Game</button>
         <div id="containerTypingGame" style="visibility : hidden;">
           <div class="kiri">
-          	<p id="countdownTyping"></p>
+            <p id="countdownTyping"></p>
             <textarea id="soalTyping" rows="16" cols="37">/* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }</textarea>
             <p id="gameOverTyping"></p>
           </div>
           <div class="kanan">
-          	<p id="typingInput"></p>
-            <textarea id="hasilTyping" rows="16" cols="37" onPaste="return false"></textarea>
+            <p id="typingInput"></p>
+            <textarea id="hasilTyping" rows="16" cols="37" onpaste="return false"></textarea>
             <p id="typingScore"></p>
           </div>
         </div>
       </section>
       <section id="guess">
-      	<h3>Fast Guess</h3>
-      	<button id="startFastGuessGame" onclick="startFastGuessGame()">Start Game</button>
-      	<h2 id="soalFastGuess"></h2>
-      	<div id="containerFastGuess" style="display:none;">
-      		<button class="fastGuessButton" onclick="check(0)">A</button>
-      		<button class="fastGuessButton" onclick="check(1)">B</button>
-      		<button class="fastGuessButton" onclick="check(2)">C</button>
-      		<button class="fastGuessButton" onclick="check(3)">D</button>
-      		<h3 id="soalCount"></h3>
-      	</div>
-      	<h3 id="countFastGuess"></h3>
-      	<h3 id="scoreFastGuess"></h3>
+        <h3>Fast Guess</h3>
+        <button id="startFastGuessGame" onclick="startFastGuessGame()">Start Game</button>
+        <h2 id="soalFastGuess"></h2>
+        <div id="containerFastGuess" style="display:none;">
+          <button onclick="check(0)" class="fastGuessButton">A</button>
+          <button onclick="check(1)" class="fastGuessButton">B</button>
+          <button onclick="check(2)" class="fastGuessButton">C</button>
+          <button onclick="check(3)" class="fastGuessButton">D</button>
+          <h3 id="soalCount"></h3>
+        </div>
+        <h3 id="countFastGuess"></h3>
+        <h3 id="scoreFastGuess"></h3>
       </section>
       <section id="lucky">
         <h2>Lucky game</h2>
@@ -79,6 +71,32 @@
         <p id="gameOverLucky"></p>
         <p id="luckyScore"></p>
         <p id="totalScore"></p>
+      </section>
+      <section>
+        <h2>Tebak Gambar</h2>
+        <h3 class="hilang">Peraturan</h3>
+        <p>1. Silahkan isi Jawaban Anda di kolom yg disediakan</p>
+        <p>2. Skor Benar +1, Tidak Jawab = 0, Salah -1</p>
+      </section>
+      <section><img src="/images/DemamTinggi.png">
+        <p></p>
+        <h2>Demam Tinggi</h2>
+      </section>
+      <section><img src="/images/CakarKucing.png">
+        <p></p>
+        <h2>Cakar Kucing  </h2>
+      </section>
+      <section><img src="/images/MendarahDaging.png">
+        <p></p>
+        <h2>Mendarah Daging     </h2>
+      </section>
+      <section><img src="/images/SatelitIndonesia.png">
+        <p></p>
+        <h2>Satelit Indonesia</h2>
+      </section>
+      <section><img src="/images/UrusanDunia.png">
+        <p></p>
+        <h2>Urusan Dunia   </h2>
       </section>
     </article>
     <script type="text/javascript" src="build/build.js"></script>
