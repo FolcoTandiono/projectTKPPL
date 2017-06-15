@@ -98,14 +98,25 @@ img {
 }
 .containerTypingGame {
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .kiri {
+  margin: 0;
+  padding: 0;
   float: left;
-  width: 50%;
+  width: 49%;
 }
 .kanan {
+  margin: 0;
+  padding: 0;
   float: right;
-  width: 50%;
+  width: 49%;
+}
+textarea {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 .containerLuckyGame {
   width: 100%;
