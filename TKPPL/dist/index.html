@@ -12,18 +12,6 @@
       <section>
         <h2>Game sederhana</h2>
       </section>
-      <section id="flappy">
-        <h3>Flappy Box</h3>
-        <button id="startFlappyBoxGame" onclick="startFlappyBoxGame()">Start Game</button>
-        <div style="text-align:center;width:480px;">
-          <p id="countdownFlappyBox"></p>
-          <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()" style="visibility: hidden;" class="buttonMoveFlappyBox">UP</button><br><br>
-          <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()" style="visibility: hidden;" class="buttonMoveFlappyBox">LEFT</button>
-          <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()" style="visibility: hidden;" class="buttonMoveFlappyBox">RIGHT</button><br><br>
-          <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()" style="visibility: hidden;" class="buttonMoveFlappyBox">DOWN</button>
-          <p id="gameOverFlappyBox"></p>
-        </div>
-      </section>
       <section id="typing">
         <h3>Typing game</h3>
         <button id="startTypingGame" onclick="startTypingGame()">Start Game</button>
@@ -59,7 +47,7 @@
         </div>
       </section>
       <section id="guess">
-        <h3>Fast Guess</h3>
+        <h3>Fast Guess game</h3>
         <button id="startFastGuessGame" onclick="startFastGuessGame()">Start Game</button>
         <h2 id="soalFastGuess"></h2>
         <div id="containerFastGuess" style="display:none;">
@@ -71,6 +59,20 @@
         </div>
         <h3 id="countFastGuess"></h3>
         <h3 id="scoreFastGuess"></h3>
+      </section>
+      <section id="advancedGuess">
+        <h3>Advanced Fast Guess game</h3>
+        <button id="startAdvancedFastGuessGame" onclick="startAdvancedFastGuessGame()">Start Game</button>
+        <h2 id="soalAdvancedFastGuess"></h2>
+        <div id="containerAdvancedFastGuess" style="display:none;">
+          <button onclick="checkAdvanced(0)" class="advancedFastGuessButton">A</button>
+          <button onclick="checkAdvanced(1)" class="advancedFastGuessButton">B</button>
+          <button onclick="checkAdvanced(2)" class="advancedFastGuessButton">C</button>
+          <button onclick="checkAdvanced(3)" class="advancedFastGuessButton">D</button>
+          <h3 id="advancedSoalCount"></h3>
+        </div>
+        <h3 id="countAdvancedFastGuess"></h3>
+        <h3 id="scoreAdvancedFastGuess"></h3>
       </section>
       <section id="lucky">
         <h2>Lucky game</h2>
@@ -92,10 +94,10 @@
       </section>
     </article>
     <script type="text/javascript" src="build/build.js"></script>
-    <script type="text/javascript" src="build/flappyBox.js"></script>
     <script type="text/javascript" src="build/typingGame.js"></script>
     <script type="text/javascript" src="build/luckyGame.js"></script>
     <script type="text/javascript" src="build/fastGuessGame.js"></script>
     <script type="text/javascript" src="build/advancedTypingGame.js"></script>
+    <script type="text/javascript" src="build/advancedFastGuessGame.js"></script>
   </body>
 </html>

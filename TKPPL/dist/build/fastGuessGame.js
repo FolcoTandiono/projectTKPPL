@@ -106,13 +106,14 @@ function check(i) {
         document.getElementById("scoreFastGuess").innerHTML = "Score : " + score;
     }
     else {
-        generateSoal();
         distanceSoal = 3;
     }
 }
 
 function startFastGuessGame() {
     distance = 60;
+    score = 0;
+    distanceSoal = 3;
     document.getElementById("startFastGuessGame").style.display = "none";
     document.getElementById("containerFastGuess").style.display = "inline";
 

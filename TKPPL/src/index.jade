@@ -11,35 +11,36 @@ html
     article
       section
         h2 Game sederhana
-      section#flappy
-        h3 Flappy Box
-        button#startFlappyBoxGame(onclick='startFlappyBoxGame()') Start Game
-        div(style='text-align:center;width:480px;')
-          p#countdownFlappyBox
-          button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;') UP
-          br
-          br
-          button.buttonMoveFlappyBox(onmousedown='moveleft()', onmouseup='clearmove()', ontouchstart='moveleft()', style='visibility: hidden;') LEFT
-          button.buttonMoveFlappyBox(onmousedown='moveright()', onmouseup='clearmove()', ontouchstart='moveright()', style='visibility: hidden;') RIGHT
-          br
-          br
-          button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;') DOWN
-          p#gameOverFlappyBox
       section#typing
         h3 Typing game
         button#startTypingGame(onclick='startTypingGame()') Start Game
         #containerTypingGame(style='visibility : hidden;')
           .kiri
             p#countdownTyping
-            textarea#soalTyping(rows='16', cols='37')
+            textarea#soalTyping(rows='16', cols='38')
               | /* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }
             p#gameOverTyping
           .kanan
             p#typingInput
-            textarea#hasilTyping(rows='16', cols='37', onpaste='return false')
+            textarea#hasilTyping(rows='16', cols='38', onpaste='return false')
             p#typingScore
+      section#advancedTyping
+        h3 Advanced Typing game
+        button#startAdvancedTypingGame(onclick='startAdvancedTypingGame()') Start Game
+        #containerAdvancedTypingGame(style='visibility : hidden;')
+          .kiriAdvanced
+            p#countdownAdvancedTyping
+            p#advancedKosong
+            textarea#soalAdvancedTyping(rows='16', cols='38')
+              | /* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }
+            p#gameOverAdvancedTyping
+          .kananAdvanced
+            p#advancedTypingLives
+            p#advancedTypingInput
+            textarea#hasilAdvancedTyping(rows='16', cols='38', onpaste='return false')
+            p#advancedTypingScore
       section#guess
-        h3 Fast Guess
+        h3 Fast Guess game
         button#startFastGuessGame(onclick='startFastGuessGame()') Start Game
         h2#soalFastGuess
         #containerFastGuess(style='display:none;')
@@ -50,6 +51,18 @@ html
           h3#soalCount
         h3#countFastGuess
         h3#scoreFastGuess
+      section#advancedGuess
+        h3 Advanced Fast Guess game
+        button#startAdvancedFastGuessGame(onclick='startAdvancedFastGuessGame()') Start Game
+        h2#soalAdvancedFastGuess
+        #containerAdvancedFastGuess(style='display:none;')
+          button.advancedFastGuessButton(onclick='checkAdvanced(0)') A
+          button.advancedFastGuessButton(onclick='checkAdvanced(1)') B
+          button.advancedFastGuessButton(onclick='checkAdvanced(2)') C
+          button.advancedFastGuessButton(onclick='checkAdvanced(3)') D
+          h3#advancedSoalCount
+        h3#countAdvancedFastGuess
+        h3#scoreAdvancedFastGuess
       section#lucky
         h2 Lucky game
         h3.hilang Peraturan
@@ -68,7 +81,8 @@ html
         p#luckyScore
         p#totalScore
     script(type='text/javascript', src='build/build.js')
-    script(type='text/javascript', src='build/flappyBox.js')
     script(type='text/javascript', src='build/typingGame.js')
     script(type='text/javascript', src='build/luckyGame.js')
     script(type='text/javascript', src='build/fastGuessGame.js')
+    script(type='text/javascript', src='build/advancedTypingGame.js')
+    script(type='text/javascript', src='build/advancedFastGuessGame.js')
