@@ -11,6 +11,20 @@ html
     article
       section
         h2 Game sederhana
+      section#flappy
+        h3 Flappy Box
+        button#startFlappyBoxGame(onclick='startFlappyBoxGame()') Start Game
+        div(style='text-align:center;width:480px;')
+          p#countdownFlappyBox
+          button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;') UP
+          br
+          br
+          button.buttonMoveFlappyBox(onmousedown='moveleft()', onmouseup='clearmove()', ontouchstart='moveleft()', style='visibility: hidden;') LEFT
+          button.buttonMoveFlappyBox(onmousedown='moveright()', onmouseup='clearmove()', ontouchstart='moveright()', style='visibility: hidden;') RIGHT
+          br
+          br
+          button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;') DOWN
+          p#gameOverFlappyBox
       section#typing
         h3 Typing game
         button#startTypingGame(onclick='startTypingGame()') Start Game
@@ -81,6 +95,7 @@ html
         p#luckyScore
         p#totalScore
     script(type='text/javascript', src='build/build.js')
+    script(type='text/javascript', src='build/flappyBox.js')
     script(type='text/javascript', src='build/typingGame.js')
     script(type='text/javascript', src='build/luckyGame.js')
     script(type='text/javascript', src='build/fastGuessGame.js')
