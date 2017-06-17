@@ -5,6 +5,7 @@ var soal, hasil;
 var sudah = [];
 var live = 5;
 var lama = 500;
+var bisa = true;
 
 function countdownAdvancedTypingGame() {
     count = setInterval(function() {
@@ -26,6 +27,7 @@ function countdownAdvancedTypingGame() {
 }
 
 function startAdvancedTypingGame() {
+	bisa = true;
 	lama = 500;
 	soal = document.getElementById("soalAdvancedTyping");
 	sudah = [];
@@ -49,6 +51,7 @@ function startAdvancedTypingGame() {
 			var temp = hasil.value;
 			var xxx;
 			if (soal.value.substring(0, temp.length) == temp) {
+				bisa = true;
 				xxx = document.getElementById("advancedTypingInput");
 				if (distance >= 0) {
 					score = temp.length * 2;
@@ -62,7 +65,8 @@ function startAdvancedTypingGame() {
 			else {
 				var key = e.keyCode || e.charCode;
 
-				if (!(key == 8 || key == 46)) {
+				if (!(key == 8 || key == 46) && bisa == true) {
+					bisa = false;
 					live--;
 					lama -= 100;
 					document.getElementById("advancedTypingLives").innerHTML = "Lives : " + live;
