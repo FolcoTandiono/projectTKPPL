@@ -29,7 +29,7 @@ function startTypingGame() {
 	for (i = 0; i < soal.value.length; i++) sudah.push(0);
 	score = 0;
 	mulai = 0;
-	distance = 270;
+	distance = 210;
     countdownTypingGame();
     var xxx = document.getElementById("startTypingGame");
     xxx.style.disabled = true;

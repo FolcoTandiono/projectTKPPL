@@ -107,7 +107,7 @@ function check(i) {
 	}
 	else {
 		generateSoal();
-		distance = 3;
+		distanceSoal = 3;
 	}
 }
 

@@ -30,13 +30,31 @@
         <div id="containerTypingGame" style="visibility : hidden;">
           <div class="kiri">
             <p id="countdownTyping"></p>
-            <textarea id="soalTyping" rows="16" cols="37">/* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }</textarea>
+            <textarea id="soalTyping" rows="16" cols="38">/* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }</textarea>
             <p id="gameOverTyping"></p>
           </div>
           <div class="kanan">
             <p id="typingInput"></p>
-            <textarea id="hasilTyping" rows="16" cols="37" onpaste="return false"></textarea>
+            <textarea id="hasilTyping" rows="16" cols="38" onpaste="return false"></textarea>
             <p id="typingScore"></p>
+          </div>
+        </div>
+      </section>
+      <section id="advancedTyping">
+      	<h3>Advanced Typing game</h3>
+        <button id="startAdvancedTypingGame" onclick="startAdvancedTypingGame()">Start Game</button>
+        <div id="containerAdvancedTypingGame" style="visibility : hidden;">
+          <div class="kiriAdvanced">
+            <p id="countdownAdvancedTyping"></p>
+            <p id="advancedKosong"></p>
+            <textarea id="soalAdvancedTyping" rows="16" cols="38">/* Read a set of characters from the socket */ StringBuffer command = new StringBuffer(); int expected = 1024; /* Cut off to avoid DoS attack */ while (expected < shutdown.length()) { if (random == null) random = new Random(System.currentTimeMillis()); expected += (random.nextInt() % 1024); } while (expected > 0) { int ch = -1; try { ch = stream.read(); } catch (IOException e) { log.warn("StandardServer.await: read: ", e); ch = -1; } if (ch < 32) /* Control character or EOF terminates loop break; command.append((char) ch); expected--; }</textarea>
+            <p id="gameOverAdvancedTyping"></p>
+          </div>
+          <div class="kananAdvanced">
+          	<p id="advancedTypingLives"></p>
+            <p id="advancedTypingInput"></p>
+            <textarea id="hasilAdvancedTyping" rows="16" cols="38" onpaste="return false"></textarea>
+            <p id="advancedTypingScore"></p>
           </div>
         </div>
       </section>
@@ -72,47 +90,12 @@
         <p id="luckyScore"></p>
         <p id="totalScore"></p>
       </section>
-      <section>
-        <h2>Tebak Gambar</h2>
-        <h3 class="hilang">Peraturan</h3>
-        <p>1. Silahkan isi Jawaban Anda di kolom yg disediakan</p>
-        <p>2. Skor Benar +1, Tidak Jawab = 0, Salah -1</p>
-      </section>
-      <section><img src="images/DemamTinggi.png">
-        <p class="bullet"></p>
-        <ul>
-        	<li>Demam Tinggi</li>
-        </ul>
-      </section>
-      <section><img src="images/CakarKucing.png">
-        <p class="bullet"></p>
-        <ul>
-        	<li>Cakar Kucing</li>
-        </ul>
-      </section>
-      <section><img src="images/MendarahDaging.png">
-        <p class="bullet"></p>
-        <ul>
-        	<li>Mendarah Daging</li>
-        </ul>
-      </section>
-      <section><img src="images/SatelitIndonesia.png">
-        <p class="bullet"></p>
-        <ul>
-        	<li>Satelit Indonesia</li>
-        </ul>
-      </section>
-      <section><img src="images/UrusanDunia.png">
-        <p class="bullet"></p>
-        <ul>
-        	<li>Urusan Dunia</li>
-        </ul>
-      </section>
     </article>
     <script type="text/javascript" src="build/build.js"></script>
     <script type="text/javascript" src="build/flappyBox.js"></script>
     <script type="text/javascript" src="build/typingGame.js"></script>
     <script type="text/javascript" src="build/luckyGame.js"></script>
     <script type="text/javascript" src="build/fastGuessGame.js"></script>
+    <script type="text/javascript" src="build/advancedTypingGame.js"></script>
   </body>
 </html>

@@ -113,6 +113,23 @@ img {
   float: right;
   width: 49.5%;
 }
+.containerAdvancedTypingGame {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.kiriAdvanced {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 49.5%;
+}
+.kananAdvanced {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 49.5%;
+}
 textarea {
   margin: 0;
   padding: 0;
@@ -145,13 +162,17 @@ textarea {
 #typingInput,
 #countdownTyping,
 #gameOverTyping,
-#typingScore {
+#typingScore,
+#advancedTypingInput,
+#countdownAdvancedTyping,
+#gameOverAdvancedTyping,
+#advancedTypingScore {
   padding: 0;
   margin: 0;
   text-align: center;
   display: inline;
 }
-#typingInput {
+#typingInput, #advancedTypingInput {
   background-color: #0f0;
 }
 .fastGuessButton {
