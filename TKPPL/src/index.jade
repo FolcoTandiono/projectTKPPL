@@ -7,10 +7,14 @@ html
     link(rel='stylesheet', type='text/css', href='build/build.css')
     script(type='text/javascript').
       var totalScore = 0; var banyak = 5; var mulai = 0;
-  body
+    style.
+      @font-face { font-family: Mogra; src: url('Mogra-Regular.ttf'); }
+  body#satu
+    audio(controls='', autoplay='', hidden='')
+      source(src='up.mp3', type='audio/mp3')
     article
-      section
-        h2 Game sederhana
+      section#section1
+        marquee Game Sederhana
       section#flappy
         h3 Flappy Box
         button#startFlappyBoxGame(onclick='startFlappyBoxGame()') Start Game

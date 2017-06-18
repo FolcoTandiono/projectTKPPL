@@ -1,4 +1,3 @@
-
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -195,23 +194,21 @@ canvas {
   border: 1px solid #000;
   background-color: #fff;
 }
-#ABC{
-    background-image: url(Deer-In-Woods.jpg);
-    background-size:cover;
+marquee {
+  text-shadow: 0 0 10px #f00, 0 0 10px #ff0;
+  font-size: 100px;
+  color: #ffffe0;
 }
-#satu{
-  background-color:rgba(0,0,0,0);
-    background-image:url(2leaves.gif);
-    background-size:auto;
-    color: #000;
-    opacity: 1;
-    text-align: center;
+#satu {
+  background-image: url("Deer-In-Woods.jpg");
+  background-size: cover;
+  margin: 0 auto;
 }
-marquee{
-    color:white;
-    text-shadow: 0 0 10px red, 0 0 5px yellow;
-    font-size:75px;
-    outline-color:black;
-    outline-width: medium;
-    font-family: Mogra;
+#section1 {
+  background-color: rgba(0,0,0,0);
+  color: #000;
+  opacity: 1;
+  text-align: center;
+  background-image: url("2leaves.gif");
+  font-family: Mogra;
 }
