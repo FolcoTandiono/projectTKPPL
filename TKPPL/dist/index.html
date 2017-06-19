@@ -4,27 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Game sederhana</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" type="text/css" href="build/build.css">
     <script type="text/javascript">var totalScore = 0; var banyak = 5; var mulai = 0;</script>
-    <style>@font-face { font-family: Mogra; src: url('Mogra-Regular.ttf'); }</style>
+    <style>
+      @font-face { font-family: Mogra; src: url('Mogra-Regular.ttf'); }
+      @font-face { font-family: Chewy; src: url('Chewy.ttf'); }
+    </style>
   </head>
   <body id="satu">
     <audio controls="" autoplay="" hidden="">
       <source src="up.mp3" type="audio/mp3">
     </audio>
     <article>
-      <section id="section1">
+      <section id="section1" hidden="">
         <marquee>Game Sederhana</marquee>
       </section>
       <section id="flappy">
-        <h3>Flappy Box</h3>
+        <div id="flappy1">Flappy Box</div>
         <button id="startFlappyBoxGame" onclick="startFlappyBoxGame()">Start Game</button>
         <div style="text-align:center;width:480px;">
           <p id="countdownFlappyBox"></p>
-          <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()" style="visibility: hidden;" class="buttonMoveFlappyBox">UP</button><br><br>
-          <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()" style="visibility: hidden;" class="buttonMoveFlappyBox">LEFT</button>
-          <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()" style="visibility: hidden;" class="buttonMoveFlappyBox">RIGHT</button><br><br>
-          <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()" style="visibility: hidden;" class="buttonMoveFlappyBox">DOWN</button>
+          <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()" style="visibility: hidden;" class="buttonMoveFlappyBox"><img id="up" src="arrow-up-ios-7-interface-symbol_318-38589.jpg"></button><br><br>
+          <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()" style="visibility: hidden;" class="buttonMoveFlappyBox"><img id="up" src="arrow-left-ios-7-interface-symbol_318-38739.jpg"></button>
+          <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()" style="visibility: hidden;" class="buttonMoveFlappyBox"><img id="up" src="arrow-right-ios-7-symbol_318-38723.jpg"></button><br><br>
+          <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()" style="visibility: hidden;" class="buttonMoveFlappyBox"><img id="up" src="arrow-bold-down-ios-7-interface-symbol_318-38703.jpg"></button>
           <p id="gameOverFlappyBox"></p>
         </div>
       </section>

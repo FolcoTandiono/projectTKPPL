@@ -206,9 +206,33 @@ marquee {
 }
 #section1 {
   background-color: rgba(0,0,0,0);
-  color: #000;
-  opacity: 1;
+  color: #fff;
   text-align: center;
   background-image: url("2leaves.gif");
   font-family: Mogra;
+}
+#flappy {
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  text-align: center;
+  background-image: url("Fall_leaves.gif");
+  font-family: Chewy;
+}
+#flappy1 {
+  text-shadow: 0 0 10px #90ee90, 0 0 10px #add8e6;
+  font-size: 50px;
+  color: #ffffe0;
+  padding-bottom: 5%;
+}
+button {
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 15px;
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+}
+#up {
+  width: 17px;
+  height: 12px;
 }

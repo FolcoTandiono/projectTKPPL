@@ -4,30 +4,37 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Game sederhana
+    link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='css/core.css')
     link(rel='stylesheet', type='text/css', href='build/build.css')
     script(type='text/javascript').
       var totalScore = 0; var banyak = 5; var mulai = 0;
     style.
       @font-face { font-family: Mogra; src: url('Mogra-Regular.ttf'); }
+      @font-face { font-family: Chewy; src: url('Chewy.ttf'); }
   body#satu
     audio(controls='', autoplay='', hidden='')
       source(src='up.mp3', type='audio/mp3')
     article
-      section#section1
+      section#section1(hidden='')
         marquee Game Sederhana
       section#flappy
-        h3 Flappy Box
+        #flappy1 Flappy Box
         button#startFlappyBoxGame(onclick='startFlappyBoxGame()') Start Game
         div(style='text-align:center;width:480px;')
           p#countdownFlappyBox
-          button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;') UP
+          button.buttonMoveFlappyBox(onmousedown='moveup()', onmouseup='clearmove()', ontouchstart='moveup()', style='visibility: hidden;')
+            img#up(src='arrow-up-ios-7-interface-symbol_318-38589.jpg')
           br
           br
-          button.buttonMoveFlappyBox(onmousedown='moveleft()', onmouseup='clearmove()', ontouchstart='moveleft()', style='visibility: hidden;') LEFT
-          button.buttonMoveFlappyBox(onmousedown='moveright()', onmouseup='clearmove()', ontouchstart='moveright()', style='visibility: hidden;') RIGHT
+          button.buttonMoveFlappyBox(onmousedown='moveleft()', onmouseup='clearmove()', ontouchstart='moveleft()', style='visibility: hidden;')
+            img#up(src='arrow-left-ios-7-interface-symbol_318-38739.jpg')
+          button.buttonMoveFlappyBox(onmousedown='moveright()', onmouseup='clearmove()', ontouchstart='moveright()', style='visibility: hidden;')
+            img#up(src='arrow-right-ios-7-symbol_318-38723.jpg')
           br
           br
-          button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;') DOWN
+          button.buttonMoveFlappyBox(onmousedown='movedown()', onmouseup='clearmove()', ontouchstart='movedown()', style='visibility: hidden;')
+            img#up(src='arrow-bold-down-ios-7-interface-symbol_318-38703.jpg')
           p#gameOverFlappyBox
       section#typing
         h3 Typing game
