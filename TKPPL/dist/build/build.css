@@ -268,7 +268,7 @@ button {
 }
 #guess {
   background-color: rgba(0,0,0,0);
-  color: #f00;
+  color: #000;
   text-shadow: 0 0 10px #00f, 0 0 10px #add8e6, 0 0 10px #fff, 0 0 10px #000;
   text-align: center;
   background-image: url("source.gif");
@@ -276,9 +276,9 @@ button {
   font-family: Chewy;
 }
 #fast1 {
-  text-shadow: 0 0 10px #000, 0 0 10px #f00, 0 0 10px #f00, 0 0 10px #f00;
+  text-shadow: 0 0 10px #00f;
   font-size: 50px;
-  color: #f00;
+  color: #000;
   padding-bottom: 5%;
 }
 #bawah {
@@ -287,6 +287,36 @@ button {
   width: 300px;
   height: 70px;
   background-image: url("halloween-pumpkin-animated-gif12-source_nku.gif");
+  background-position: bottom;
+  background-size: cover;
+}
+#advancedGuess {
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  text-shadow: 0 0 10px #8b0000, 0 0 10px #f00, 0 0 10px #fff, 0 0 10px #000;
+  text-align: center;
+  background-image: url("blood-drip-23.gif");
+  background-size: cover;
+  font-family: Chewy;
+}
+#fast2 {
+  text-shadow: 0 0 10px #000, 0 0 10px #f00, 0 0 10px #f00, 0 0 10px #f00;
+  font-size: 50px;
+  color: #f00;
+  padding-bottom: 5%;
+}
+#countAdvancedFastGuess,
+#scoreAdvancedFastGuess,
+#advancedSoalCount {
+  color: #f00;
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+}
+#bawah1 {
+  margin-top: 0px;
+  padding-top: 80px;
+  width: 300px;
+  height: 70px;
+  background-image: url("tumblr_ncy1g2CO021tolz6zo1_500.gif");
   background-position: bottom;
   background-size: cover;
 }
