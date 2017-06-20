@@ -320,3 +320,18 @@ button {
   background-position: bottom;
   background-size: cover;
 }
+#lucky {
+  background-color: rgba(0,0,0,0);
+  color: #fffafa;
+  text-shadow: 0 0 10px #ffb6c1, 0 0 10px #ffb6c1, 0 0 10px #ffc0cb, 0 0 10px #000;
+  text-align: center;
+  background-image: url("tumblr_ml0hv3q2Df1s6294bo1_400.gif");
+  background-size: cover;
+  font-family: Chewy;
+}
+#lucky1 {
+  text-shadow: 0 0 10px #f00, 0 0 10px #ffc0cb, 0 0 10px #fff, 0 0 10px #fff;
+  font-size: 50px;
+  color: #ffb6c1;
+  padding-bottom: 5%;
+}
