@@ -236,40 +236,57 @@ button {
   width: 17px;
   height: 12px;
 }
-
-#typing{
+#typing {
   background-color: rgba(0,0,0,0);
-  color: white;
-  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black;
+  color: #fff;
+  text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
   text-align: center;
   background-image: url("0_97acd_e5d19def_L.gif");
-  background-size:auto;
+  background-size: auto;
   font-family: Chewy;
-    
 }
-
-#typing1{
-  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
+#typing1 {
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
   font-size: 50px;
-  color: black;
+  color: #000;
   padding-bottom: 5%;
 }
-#advanced1{
-      text-shadow: 0 0 10px white, 0 0 10px blue, 0 0 10px lightblue, 0 0 10px yellow;
+#advanced1 {
+  text-shadow: 0 0 10px #fff, 0 0 10px #00f, 0 0 10px #add8e6, 0 0 10px #ff0;
   font-size: 50px;
-  color: white;
+  color: #fff;
   padding-bottom: 5%;
-    
 }
-
-#advancedTyping{
+#advancedTyping {
   background-color: rgba(0,0,0,0);
-  color: white;
-  text-shadow: 0 0 10px blue, 0 0 10px lightblue, 0 0 10px white, 0 0 10px blue;
+  color: #fff;
+  text-shadow: 0 0 10px #00f, 0 0 10px #add8e6, 0 0 10px #fff, 0 0 10px #00f;
   text-align: center;
   background-image: url("365213_759c6.gif");
-  background-size:auto;
+  background-size: auto;
   font-family: Chewy;
-    
-    
+}
+#guess {
+  background-color: rgba(0,0,0,0);
+  color: #f00;
+  text-shadow: 0 0 10px #00f, 0 0 10px #add8e6, 0 0 10px #fff, 0 0 10px #000;
+  text-align: center;
+  background-image: url("source.gif");
+  background-size: contain;
+  font-family: Chewy;
+}
+#fast1 {
+  text-shadow: 0 0 10px #000, 0 0 10px #f00, 0 0 10px #f00, 0 0 10px #f00;
+  font-size: 50px;
+  color: #f00;
+  padding-bottom: 5%;
+}
+#bawah {
+  margin-top: 0px;
+  padding-top: 80px;
+  width: 300px;
+  height: 70px;
+  background-image: url("halloween-pumpkin-animated-gif12-source_nku.gif");
+  background-position: bottom;
+  background-size: cover;
 }
