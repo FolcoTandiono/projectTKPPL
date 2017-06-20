@@ -236,3 +236,21 @@ button {
   width: 17px;
   height: 12px;
 }
+
+#typing{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black;
+  text-align: center;
+  background-image: url("0_97acd_e5d19def_L.gif");
+  background-size:auto;
+  font-family: Chewy;
+    
+}
+
+#typing1{
+  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
+  font-size: 50px;
+  color: black;
+  padding-bottom: 5%;
+}
