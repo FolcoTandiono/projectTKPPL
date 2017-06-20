@@ -254,3 +254,22 @@ button {
   color: black;
   padding-bottom: 5%;
 }
+#advanced1{
+      text-shadow: 0 0 10px white, 0 0 10px blue, 0 0 10px lightblue, 0 0 10px yellow;
+  font-size: 50px;
+  color: white;
+  padding-bottom: 5%;
+    
+}
+
+#advancedTyping{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  text-shadow: 0 0 10px blue, 0 0 10px lightblue, 0 0 10px white, 0 0 10px blue;
+  text-align: center;
+  background-image: url("365213_759c6.gif");
+  background-size:auto;
+  font-family: Chewy;
+    
+    
+}
